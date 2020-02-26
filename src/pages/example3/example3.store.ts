@@ -45,10 +45,14 @@ export const incrementAfter1SecondAndThrow = () => async (dispatch: any) => {
 
 export const example3Reducer = createReducer(defaultState, {
   [example3IncrementAction.type]: state => {
-    state.count = state.count + 1;
+    if (!state.lock) {
+      state.count = state.count + 1;
+    }
   },
   [example3DecrementAction.type]: state => {
-    state.count = state.count - 1;
+    if (!state.lock) {
+      state.count = state.count - 1;
+    }
   },
   [example3ToggleLocAction.type]: (state, action: PayloadAction<boolean>) => {
     state.lock = action.payload;
