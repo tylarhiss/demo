@@ -3,9 +3,6 @@ import "./App.css";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Route, useHistory } from "react-router";
 
-import { ReducersPage } from "pages/reducers/ReducersPage";
-import { SelectorsPage } from "pages/selectors/SelectorsPage";
-
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 
@@ -94,7 +91,7 @@ function App() {
             <MenuOutlined />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Mini variant drawer
+            Mini redux examples
           </Typography>
         </Toolbar>
       </AppBar>
