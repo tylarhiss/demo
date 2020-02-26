@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Route, useHistory } from "react-router";
-import { ActionsPage } from "pages/actions/ActionsPage";
+
 import { ReducersPage } from "pages/reducers/ReducersPage";
 import { SelectorsPage } from "pages/selectors/SelectorsPage";
-import clsx from "clsx";
 
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
@@ -19,28 +18,32 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Divider } from "@material-ui/core";
+import { Example1Page } from "pages/example1/Example1Page";
+import { Example2Page } from "pages/example2/Example2Page";
+import { Example3Page } from "pages/example3/Example3Page";
 
 const useStyles = makeStyles(theme => ({
   drawer: {
     width: "500px"
   },
   content: {
-    marginTop: "64px"
+    marginTop: "64px",
+    padding: "1rem"
   }
 }));
 
 const routes: { text: string; route: string }[] = [
   {
-    text: "Actions",
-    route: "/actions"
+    text: "Example1",
+    route: "/example1"
   },
   {
-    text: "Reducers",
-    route: "/actions"
+    text: "Example2",
+    route: "/example2"
   },
   {
-    text: "Selectors",
-    route: "/actions"
+    text: "Example3",
+    route: "/example3"
   }
 ];
 
@@ -53,13 +56,6 @@ const SideBar = () => {
 
   return (
     <List>
-      {/* <ListItem button component="a" onClick={handleNavigation}>
-        <ListItemText primary={"Actions"} />
-      </ListItem>
-      <Divider></Divider>
-
-      <Link to={"/reducers"}>Reducers</Link>
-      <Link to={"/selectors"}>Selectors</Link> */}
       {routes.map(r => (
         <React.Fragment key={r.text}>
           <ListItem
@@ -102,9 +98,9 @@ function App() {
       </Drawer>
 
       <div className={classes.content}>
-        <Route path={"/actions"} component={ActionsPage} />
-        <Route path={"/reducers"} component={ReducersPage} />
-        <Route path={"/selectors"} component={SelectorsPage} />
+        <Route path={"/example1"} component={Example1Page} />
+        <Route path={"/example2"} component={Example2Page} />
+        <Route path={"/example3"} component={Example3Page} />
       </div>
     </BrowserRouter>
   );
