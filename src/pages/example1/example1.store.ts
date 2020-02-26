@@ -41,10 +41,10 @@ export const example1Reducer = (
       return { ...state, lock: action.payload };
     }
     case Example1ActionTypes.Increment: {
-      return { ...state, count: state.count + 1 };
+      return { ...state, count: !state.lock ? state.count + 1 : state.count };
     }
     case Example1ActionTypes.Decrement: {
-      return { ...state, count: state.count - 1 };
+      return { ...state, count: !state.lock ? state.count - 1 : state.count };
     }
     default: {
       return state;

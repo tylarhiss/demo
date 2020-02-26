@@ -87,6 +87,14 @@ export const Example3Page = () => {
         >
           Increment Thunk (1ms)
         </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={errorThunk}
+          disabled={!canIncrement}
+        >
+          Increment Thunk (1ms) Error
+        </Button>
 
         <Button
           variant="contained"

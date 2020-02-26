@@ -44,7 +44,7 @@ export const Example1Page = () => {
         <Button
           variant="contained"
           color="primary"
-          onClick={() => handleLock(true)}
+          onClick={() => handleLock(!ex1State.lock)}
         >
           Toggle Lock
         </Button>
