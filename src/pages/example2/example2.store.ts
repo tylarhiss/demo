@@ -31,7 +31,7 @@ export interface Example2DecrementAction {
   type: Example2ActionTypes.Decrement;
 }
 
-export interface Exampl2ChangeLockAction {
+export interface Example2ChangeLockAction {
   type: Example2ActionTypes.ChangeLock;
   payload: boolean;
 }
@@ -54,7 +54,7 @@ export const example2Decrement = (): Example2DecrementAction => ({
 });
 export const exampl2ChangeLockAction = (
   lock: boolean
-): Exampl2ChangeLockAction => ({
+): Example2ChangeLockAction => ({
   type: Example2ActionTypes.ChangeLock,
   payload: lock
 });
@@ -75,7 +75,7 @@ export const example2StoreCurrentValueWithImmerAction = (
 export type Example2Actions =
   | Example2IncrementAction
   | Example2DecrementAction
-  | Exampl2ChangeLockAction
+  | Example2ChangeLockAction
   | Example2StoreCurrentValueAction
   | Example2StoreCurrentValueWithImmerAction;
 

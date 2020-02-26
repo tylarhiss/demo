@@ -22,7 +22,7 @@ export interface Example1DecrementAction {
   type: Example1ActionTypes.Decrement;
 }
 
-export interface Exampl1ChangeLockAction {
+export interface Example1ChangeLockAction {
   type: Example1ActionTypes.ChangeLock;
   payload: boolean;
 }
@@ -30,7 +30,7 @@ export interface Exampl1ChangeLockAction {
 export type Example1Actions =
   | Example1IncrementAction
   | Example1DecrementAction
-  | Exampl1ChangeLockAction;
+  | Example1ChangeLockAction;
 
 export const example1Reducer = (
   state: Example1State = defaultState,

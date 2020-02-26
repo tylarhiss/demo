@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Example1ActionTypes,
-  Exampl1ChangeLockAction,
+  Example1ChangeLockAction,
   Example1State
 } from "./example1.store";
 import Button from "@material-ui/core/Button";
@@ -20,7 +20,7 @@ export const Example1Page = () => {
   };
 
   const handleLock = (lock: boolean) => {
-    const action: Exampl1ChangeLockAction = {
+    const action: Example1ChangeLockAction = {
       type: Example1ActionTypes.ChangeLock,
       payload: lock
     };
