@@ -21,6 +21,7 @@ import { Divider } from "@material-ui/core";
 import { Example1Page } from "pages/example1/Example1Page";
 import { Example2Page } from "pages/example2/Example2Page";
 import { Example3Page } from "pages/example3/Example3Page";
+import { FinalPage } from "pages/final/FinalPage";
 
 const useStyles = makeStyles(theme => ({
   drawer: {
@@ -44,6 +45,10 @@ const routes: { text: string; route: string }[] = [
   {
     text: "Example3",
     route: "/example3"
+  },
+  {
+    text: "Final",
+    route: "/final"
   }
 ];
 
@@ -101,6 +106,7 @@ function App() {
         <Route path={"/example1"} component={Example1Page} />
         <Route path={"/example2"} component={Example2Page} />
         <Route path={"/example3"} component={Example3Page} />
+        <Route path={"/final"} component={FinalPage} />
       </div>
     </BrowserRouter>
   );
